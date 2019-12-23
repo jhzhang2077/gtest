@@ -10,9 +10,9 @@
 #RELATIVE_PATH /googletest/include)
 
     target_link_libraries(unittest
-                                   ../googletest/lib/gtest
-                                   ../googletest/lib/gtest_main
-                                  
+                                   ../googletest/lib/gtestd
+                                   ../googletest/lib/gtest_maind
+                                   
                                    )
     
 
