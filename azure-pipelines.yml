@@ -13,16 +13,13 @@ jobs:
     name: Home Pool
     demands:
     - cmake
-    variables:
-      configuration: debug
-      platform: x64
 
   steps:
-  - task: CMake@1
-    displayName: 'CMake ..'
-    inputs:
-      #workingDirectory: 'build' #Optional
-      cmakeArgs: ..
+#  - task: CMake@1
+#    displayName: 'CMake ..'
+#    inputs:
+#      #workingDirectory: 'build' #Optional
+#      cmakeArgs: ..
   - task: CMake@1
     displayName: 'CMake '
     inputs:
