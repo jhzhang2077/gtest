@@ -23,5 +23,5 @@ jobs:
   - task: CMake@1
     displayName: 'CMake --build . --config Debug'
     inputs: 
-     cmakeArgs: '--build . --config Debug'
-    
+     cmakeArgs: '--build . --config Debug -G "Visual Studio 14 Win 64"'
+
