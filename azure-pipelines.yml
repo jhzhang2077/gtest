@@ -20,8 +20,9 @@ jobs:
     inputs:
       #workingDirectory: 'build' #Optional
       cmakeArgs: ..
+
   - task: CMake@1
     displayName: 'CMake --build . --config Debug'
     inputs: 
-     cmakeArgs: '--build . --config Debug| -G "Visual Studio 14 Win64" path\to\soure\dir '
+     cmakeArgs: '--build . --config Debug -A x64'
 
