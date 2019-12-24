@@ -31,3 +31,10 @@ jobs:
     inputs: 
      cmakeArgs: '--build . --config Debug'
 
+  - task: CmdLine@2
+    displayName: 'results'
+    inputs:
+     script: 'build\Debug\unittest.exe ->results.txt'
+    
+     
+
