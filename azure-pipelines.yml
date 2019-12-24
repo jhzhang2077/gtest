@@ -27,5 +27,5 @@ jobs:
   - task: CMake@1
     displayName: 'CMake --build . --config Debug'
     inputs: 
-     cmakeArgs: '--build . --config Debug -A x64'
+     cmakeArgs: '--build . --config Debug'
 
