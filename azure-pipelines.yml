@@ -31,8 +31,8 @@ jobs:
      cmakeArgs: '--build . --config Debug'
 
   - script: 
-     cd $(system.defaultWorkingDirectory)\build\Debug 
-     unittest.exe ->results.xml
+     cd $(system.defaultWorkingDirectory)\build\Debug
+     
 
     
      
