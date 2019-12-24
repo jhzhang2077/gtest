@@ -24,10 +24,10 @@ jobs:
       #workingDirectory: 'build' #Optional
       cmakeArgs: ..
   - task: CMake@1
-    displayName: 'CMake ..'
+    displayName: 'CMake '
     inputs:
       #workingDirectory: 'build' #Optional
-      cmakeArgs: '-A x64'
+      cmakeArgs: '-G "Visual Studio 14 2015" -A x64 ..' 
 
   - task: CMake@1
     displayName: 'CMake --build . --config Debug'
