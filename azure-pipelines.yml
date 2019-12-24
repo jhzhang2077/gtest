@@ -23,6 +23,11 @@ jobs:
     inputs:
       #workingDirectory: 'build' #Optional
       cmakeArgs: ..
+  - task: CMake@1
+    displayName: 'CMake ..'
+    inputs:
+      #workingDirectory: 'build' #Optional
+      cmakeArgs: '-A x64'
 
   - task: CMake@1
     displayName: 'CMake --build . --config Debug'
