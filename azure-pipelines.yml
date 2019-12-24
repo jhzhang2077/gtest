@@ -6,7 +6,6 @@
 trigger:
 - master
 
-
 jobs: 
 - job: Windows
   pool:
@@ -31,11 +30,10 @@ jobs:
     inputs: 
      cmakeArgs: '--build . --config Debug'
 
-  - task: CmdLine@2
-    displayName: 'results'
-    inputs:
-     workingDirectory: '.\build\Debug'
-     script: 'unittest.exe ->results.txt'
+  - script: 
+     cd $(system.defaultWorkingDirectory) 
+     unittest.exe ->results.xml
+     
     
      
 
