@@ -34,7 +34,8 @@ jobs:
   - task: CmdLine@2
     displayName: 'results'
     inputs:
-     script: '.\Debug\unittest.exe ->results.txt'
+     workingDirectory: '.\Debug'
+     script: 'unittest.exe ->results.txt'
     
      
 
