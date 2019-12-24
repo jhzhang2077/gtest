@@ -31,7 +31,7 @@ jobs:
      cmakeArgs: '--build . --config Debug'
 
   - script: 
-     $(system.defaultWorkingDirectory)\build\Debug\unittest.exe ->results.txt
+     $(system.defaultWorkingDirectory)\build\Debug\unittest.exe
     displayName: 'test result'
 
     
