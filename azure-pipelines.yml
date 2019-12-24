@@ -5,16 +5,23 @@
 
 trigger:
 - master
-- jobs: Windows
+
+
+jobs: 
+- job: Windows
   pool:
-    name: 
+    name: Default
+    demands:
+    - cmake
 
-
-
-
-
-- task: CMake@1
-  inputs:
-    workingDirectory: 'build' #Optional
-    cmakeArgs: 
-      
+  steps:
+  - task: CMake@1
+    displayName: 'CMake ..'
+    inputs:
+      #workingDirectory: 'build' #Optional
+      cmakeArgs: ..
+  - task: CMake@1
+    displayName: 'CMake --build . --config Debug'
+    inputs: 
+     cmakeArgs: '--build . --config Debug'
+    
