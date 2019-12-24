@@ -10,7 +10,7 @@ trigger:
 jobs: 
 - job: Windows
   pool:
-    name: DESKTOP-8GNJ7SH
+    name: Home Pool
     demands:
     - cmake
 
