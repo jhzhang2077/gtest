@@ -40,7 +40,7 @@ jobs:
      script: |
       # Write your PowerShell commands here.
       
-      $(system.defaultWorkingDirectory)\build\Debug\unittest.exe
+      $(system.defaultWorkingDirectory)\build\Debug\unittest.exe get-process |Out-File -filepath results.txt
       exit
      
 
