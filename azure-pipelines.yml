@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+jobs: 
+- job: Windows
+  pool:
+    name: Home Pool
+    demands:
+    - cmake
+
+  steps:
+#  - task: CMake@1
+#    displayName: 'CMake ..'
+#    inputs:
+#      #workingDirectory: 'build' #Optional
+#      cmakeArgs: ..
+  - task: CMake@1
+    displayName: 'CMake '
+    inputs:
+      #workingDirectory: 'build' #Optional
+      cmakeArgs: '-G "Visual Studio 15 2017" -A x64 ..' 
+
+  - task: CMake@1
+    displayName: 'CMake --build . --config Debug'
+    inputs: 
+     cmakeArgs: '--build . --config Debug'
+
+##  - script: 
+##     $(system.defaultWorkingDirectory)\build\Debug\unittest.exe
+##    displayName: 'test result'
+
+  - task: PowerShell@2
+    inputs:
+     targetType: 'inline'
+     script: |
+      # Write your PowerShell commands here.
+      
+      $(system.defaultWorkingDirectory)\build\Debug\unittest.exe get-process |Out-File -filepath results.txt
+      exit
+     
+
