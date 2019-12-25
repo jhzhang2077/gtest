@@ -2,12 +2,10 @@
     cmake_minimum_required(VERSION 3.6)
     
   include_directories(googletest/include)
+ 
   
-
     project(unittest)
     add_executable(unittest unittest.cpp)
-#   target_include_directories(unittest
-#RELATIVE_PATH /googletest/include)
 
     target_link_libraries(unittest
                                    ../googletest/lib/gtestd
