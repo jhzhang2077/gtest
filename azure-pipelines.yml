@@ -34,6 +34,13 @@ jobs:
 ##     $(system.defaultWorkingDirectory)\build\Debug\unittest.exe
 ##    displayName: 'test result'
 
+  - task: PowerShell@2
+    inputs:
+     targetType: 'inline'
+     script: |
+      # Write your PowerShell commands here.
+      
+      $(system.defaultWorkingDirectory)\build\Debug\unittest.exe ->results.txt
     
      
 
